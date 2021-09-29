@@ -1,0 +1,150 @@
+/*Base, settings, variables, etc*/
+/*------------*\
+  $VARIABLES
+\*------------*/
+/**
+*Colors
+*/
+/**
+* Fonts
+*/
+/**
+* Space
+*/
+/*------------*\
+    Placeholders
+\*------------*/
+.principal-contain, body {
+  min-width: 320px;
+  width: 100%;
+}
+
+.value, .answer, .head__title {
+  color: #ededed;
+}
+
+.answer, .gain__data, .discount__data, .head {
+  text-align: center;
+}
+
+/*layout*/
+/*Base*/
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #FBF9FA;
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+/*Layout*/
+.head {
+  height: 100px;
+  background: #FD0054;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.head__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.principal-contain {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.principal-contain__gain, .principal-contain__discount {
+  width: 90%;
+  margin: 20px 0;
+  padding: 20px 0;
+  font-size: 1.8rem;
+}
+
+.card-title {
+  margin: 0 auto 50px auto;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2B2024;
+}
+
+.gain__data, .discount__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(253, 0, 84, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.data__container {
+  width: 100%;
+}
+
+.data__container div {
+  margin: 20px;
+}
+
+.question {
+  margin: 20px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.answer {
+  height: 80px;
+  width: 100%;
+  margin: 30px 0;
+  padding: 10px;
+  font-size: 2.2rem;
+  background: rgba(253, 0, 84, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.value {
+  width: 90%;
+  min-height: 100px;
+  margin: 0 0 20px 0;
+  font-size: 2.8rem;
+  background: rgba(253, 0, 84, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+.value p {
+  padding: 37px;
+}
+
+.foot {
+  height: 100px;
+  margin-top: 30px;
+  background: #A80038;
+}
+
+/*# sourceMappingURL=finance.css.map */

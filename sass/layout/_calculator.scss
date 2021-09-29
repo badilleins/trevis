@@ -1,0 +1,111 @@
+/*Base*/
+*{
+  font-size: 62.5%;
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+body{
+  background: $ligth-background-first-color;
+  font-family: $body-font;
+  font-size: $normal-font;
+  @extend %responsive-width;
+}
+input::placeholder{
+  color: #ddd;
+}
+/*Layout*/
+.head{
+  height: 100px;
+  background: $ligth-background-second-color;
+  font-family: $titles-font;
+  margin-bottom: $huge-space;
+  padding:$big-space;
+  @extend %text-center;
+}
+.head__title{
+  font-size: $huge-font;
+  font-weight: $chubby-font;
+  letter-spacing: 5px;
+  @extend %letters-color;
+}
+.principal-contain{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  @extend  %responsive-width;
+  padding:$normal-space;
+}
+.principal-contain__gain, .principal-contain__discount{
+  width: 90%;
+  margin: $big-space 0;
+  padding:$big-space 0;
+  font-size: $normal-font;
+}
+.card-title{
+  margin: 0 auto 50px auto;
+  text-align: center;
+  font-family: $titles-font;
+  font-size: $big-font;
+  font-weight: $fat-font;
+  color: $dark-second-action-color;
+}
+.gain__data, .discount__data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @extend %text-center;
+  padding:$normal-space $huge-space;
+  background: rgba( 253, 0, 84, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: $big-space;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.data__container{
+  width: 100%;
+}
+.data__container  div{
+  margin:$big-space;
+}
+.question{
+  margin: $big-space 0;
+  font-family: $titles-font;
+  font-size: $big-font;
+  font-weight: $norm-font;
+}
+.answer{
+  height: 80px;
+  width: 100%;
+  margin: $huge-space 0;
+  padding: $normal-space;
+  @extend %text-center;
+  @extend %letters-color;
+  font-size: $big-font;
+  background: rgba( 253, 0, 84, 0.55 );
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: $normal-space;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.value {
+  width: 90%;
+  min-height: 100px;
+  margin: 0 0 $big-space 0;
+  font-size: $enormous-font;
+  @extend %letters-color;
+  background: rgba( 253, 0, 84, 0.55 );
+  backdrop-filter: blur( 3px );
+  -webkit-backdrop-filter: blur( 3px );
+  border-radius: $normal-space;
+}
+.value p{
+  padding:37px;
+}
+.foot{
+  height: 100px;
+  margin-top: $huge-space;
+  background: $dark-first-action-color;
+}
