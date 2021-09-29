@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/finance.css">
+    <link rel="stylesheet" type="text/css" href="../css/desktop.css" media="(min-width:630px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <title>Finance calculator</title>
+  </head>
+  <body>
+    <header class="head">
+        <em class="head__title">
+          Calculadora Trevis' finanzas
+        </em>
+    </header>
+    <main class="principal-contain">
+      <section class="principal-contain__gain">
+        <h2 class="card-title">Calcula la ganancia o la pérdida de una venta</h2>
+        <form class="gain__data">
+          <div class="data__container">
+            <div>
+              <label class="data__question--buy question" for="buyPrice">Ingrese el precio de compra</label>
+              <input class="data__answer--buy answer" type="number" id="buyPrice" required placeholder="ejemplo: 2" oninput="calculateGain()" >
+            </div>
+            <div>
+              <label class="data__question--sell question" for="sellPrice">Ingrese el precio de venta</label>
+              <input class="data__answer--sell answer" type="number" id="sellPrice" required placeholder="ejemplo: 5" oninput="calculateGain()">
+            </div>
+          </div>
+          <span class="question">Resultado</span>
+          <div class="data__value-gain value"><p id="userGain"></p></div>
+        </form>
+      </section>
+      <section class="principal-contain__discount ">
+        <h2 class="card-title">Calcula el precio que queda luego de aplicar el descuento</h2>
+        <form class="discount__data">
+          <div class="data__container">
+            <div>
+              <label class="data__question--sell2 question" for="sellPrice2">Ingrese el precio de venta</label>
+              <input  class="data__answer--sell2 answer" type="number" id="sellPrice2" required placeholder="ejemplo: 5" oninput="getNewPrice()">
+            </div>
+            <div>
+              <label class="data__question--offer question" for="theOffer">Ingrese el porcentaje de descuento</label>
+              <input list="coupons" class="data__answer--offer answer" type="text" id="theOffer" required placeholder="ejemplo: 5%" oninput="getNewPrice()" >
+              <datalist id="coupons">
+                <option value="5%"></option>
+                <option value="10%"></option>
+                <option value="15%"></option>
+                <option value="20%"></option>
+                <option value="25%"></option>
+              </datalist>
+            </div>
+          </div>
+          <span class="question">Resultado</span>
+          <div class="data__value-newPrice value">
+            <p id="newPrice"></p>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="foot">
+    </footer>
+    <script src="../javascript/finance.js">
+    </script>
+  </body>
+</html>
