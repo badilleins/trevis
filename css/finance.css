@@ -14,6 +14,16 @@
 /*------------*\
     Placeholders
 \*------------*/
+html{
+  min-width: 320px;
+}
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .principal-contain, body {
   min-width: 320px;
   width: 100%;
@@ -29,12 +39,6 @@
 
 /*layout*/
 /*Base*/
-* {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 body {
   background: #FBF9FA;
