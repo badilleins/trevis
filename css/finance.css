@@ -14,22 +14,12 @@
 /*------------*\
     Placeholders
 \*------------*/
-html{
-  min-width: 320px;
-}
-* {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 .principal-contain, body {
   min-width: 320px;
   width: 100%;
 }
 
-.value, .answer, .head__title {
+.value, .answer, .head {
   color: #ededed;
 }
 
@@ -39,8 +29,16 @@ html{
 
 /*layout*/
 /*Base*/
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 body {
+  display: grid;
+  grid-template-rows: 0.7fr 3fr 0.3fr;
   background: #FBF9FA;
   font-family: "Lato", sans-serif;
   font-size: 1.8rem;
@@ -50,19 +48,42 @@ input::placeholder {
   color: #ddd;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /*Layout*/
 .head {
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   background: #FD0054;
   font-family: "Roboto", sans-serif;
   margin-bottom: 30px;
-  padding: 20px;
 }
 
 .head__title {
-  font-size: 2.5rem;
+  width: 90%;
+  font-size: 3.2rem;
   font-weight: 900;
   letter-spacing: 5px;
+}
+
+.head__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.head__navigation .navigation__item {
+  margin: 0 20px 20px;
+}
+
+.head__navigation .item__link {
+  font-size: 2.2rem;
 }
 
 .principal-contain {
@@ -95,8 +116,8 @@ input::placeholder {
   align-items: center;
   padding: 10px 30px;
   background: rgba(253, 0, 84, 0.1);
+  backdrop-filter: blur(3px);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -146,9 +167,25 @@ input::placeholder {
 }
 
 .foot {
-  height: 100px;
   margin-top: 30px;
   background: #A80038;
+}
+
+/*Status*/
+.answer:focus {
+  border: solid 2px #A80038;
+  border-top: none;
+  border-bottom: none;
+  outline: none;
+}
+
+.answer:hover {
+  backdrop-filter: none;
+}
+
+.head__navigation .item__link:hover {
+  color: #FBF9FA;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=finance.css.map */

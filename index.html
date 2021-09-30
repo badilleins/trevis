@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/finance.css">
     <link rel="stylesheet" type="text/css" href="css/desktop.css" media="(min-width:630px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,10 +15,14 @@
         <em class="head__title">
           Calculadora Trevis' finanzas
         </em>
+        <ul class="head__navigation">
+          <li class="navigation__discount navigation__item"><a  class="item__link" href="#discountCalculator">Calcular precio al aplicar descuento</a></li>
+          <li class="navigation__gain navigation__item"><a class="item__link"  href="#gainCalculator">Calcular la ganancia o pérdida</a></li>
+        </ul>
     </header>
     <main class="principal-contain">
-      <section class="principal-contain__gain">
-        <h2 class="card-title">Calcula la ganancia o la pérdida de una venta</h2>
+      <section class="principal-contain__gain" id="gainCalculator">
+        <h2 class="card-title" >Calcula la ganancia o la pérdida de una venta</h2>
         <form class="gain__data">
           <div class="data__container">
             <div>
@@ -33,7 +38,7 @@
           <div class="data__value-gain value"><p id="userGain"></p></div>
         </form>
       </section>
-      <section class="principal-contain__discount ">
+      <section class="principal-contain__discount " id="discountCalculator">
         <h2 class="card-title">Calcula el precio que queda luego de aplicar el descuento</h2>
         <form class="discount__data">
           <div class="data__container">

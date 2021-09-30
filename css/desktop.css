@@ -13,14 +13,9 @@
 /**
 * Space
 */
-.head {
-  padding-top: 30px;
-}
-
 .data__container {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
 }
 
 .data__container div {
