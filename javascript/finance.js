@@ -46,10 +46,19 @@ function discoverDiscountWord(amount){
       if (num % 1 == 0) {
           return num
       } else {
-          let twoDecimals = num.toFixed(2)
+          let twoDecimals = parseFloat(num.toFixed(2))
           return twoDecimals
       }
     }
+    function validateAnswer(res){
+      if(res < 0){
+        newResult = res * -1
+        return newResult
+      }else{
+        return res
+      }
+    }
+
 //Calcular la ganancia
 
 function calculateGain(){
@@ -59,22 +68,23 @@ function calculateGain(){
     let result = sellPrice - buyPrice
     let answer = validateAnswer(result)
     let trueAnswer = isWhole(answer)
-    let userGain = `Usted está ${moneyStatus(result)} ${trueAnswer} ${discoverPriceWord(answer)}`
+    let gainPercentage = calculateGainPercentage(trueAnswer, sellPrice)
+    let userGain = `Usted está ${moneyStatus(result)} ${trueAnswer} ${discoverPriceWord(answer)} y el porcentaje de ganancia es ${gainPercentage}`
     document.getElementById('userGain').innerText = userGain
   }else{
     document.getElementById('userGain').innerText = `Ingrese números positivos`
   }
 }
-function validateAnswer(res){
-  if(res < 0){
-    newResult = res * -1
-    return newResult
+function calculateGainPercentage(income, totalIncome) {
+  if(totalIncome == null ||  totalIncome == 0 ){
+    return 0
   }else{
-    return res
+  let percentage = (income / totalIncome) * 100
+  let newPercentage = isWhole(percentage)
+  let percentageAndSymbol = `${newPercentage} %`
+  return percentageAndSymbol;
   }
 }
-
-
 //Calculate price after discount
 function getNewPrice(){
   let offers = ['5%','10%','15%','20%','25%']

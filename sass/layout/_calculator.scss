@@ -1,4 +1,7 @@
 /*Base*/
+html {
+  scroll-behavior: smooth;
+}
 *{
   font-size: 62.5%;
   box-sizing: border-box;
@@ -26,7 +29,7 @@ a{
   flex-direction:column;
   justify-content:space-evenly;
   align-items:center;
-  background: $dark-action-second-color;
+  background: $ligth-background-second-color;
   font-family: $titles-font;
   margin-bottom: $huge-space;
   @extend %text-center;
@@ -42,17 +45,19 @@ a{
   display:flex;
   flex-wrap:wrap;
   justify-content:space-evenly;
+  width: 75%;
   list-style:none;
 }
 .head__navigation .navigation__item{
   margin:0 20px 20px;
+  color: #bdcbdc;
 }
 .head__navigation .item__link{
   font-size:$big-font;
 }
 .principal-contain{
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   @extend  %responsive-width;
   padding:$normal-space;
@@ -122,8 +127,20 @@ a{
   -webkit-backdrop-filter: blur( 3px );
   border-radius: $normal-space;
 }
-.value p{
+.value p,{
   padding:37px;
+}
+.last-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 250px;
+  margin:$big-space auto;
+  font-size: $enormous-font;
+  @extend %letters-color;
+  background: linear-gradient($ligth-background-second-color, $dark-first-action-color);
+  border-radius: $big-space;
 }
 .foot{
   margin-top: $huge-space;
