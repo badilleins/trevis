@@ -29,14 +29,14 @@ function discoverDiscountWord(amount){
     }
   }
   function validateGainNumber(numberA,numberB){
-        if(numberA < 0 ||  numberB < 0){
+        if(numberA < 0 ||  numberB < 0 || isNaN(numberA) || isNaN(numberB)){
           return false
         }else{
           return true
         }
       }
   function validateDiscountNumber(number){
-        if(number < 0){
+        if(number < 0 || isNaN(number)){
           return false
         }else{
           return true

@@ -117,6 +117,9 @@ a{
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   min-height: 100px;
   margin: 0 0 $big-space 0;
@@ -127,8 +130,8 @@ a{
   -webkit-backdrop-filter: blur( 3px );
   border-radius: $normal-space;
 }
-.value p,{
-  padding:37px;
+.value p{
+  width: 80%;
 }
 .last-link{
   display: flex;

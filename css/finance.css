@@ -158,6 +158,9 @@ a {
 }
 
 .value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 90%;
   min-height: 100px;
   margin: 0 0 20px 0;
@@ -169,7 +172,7 @@ a {
 }
 
 .value p {
-  padding: 37px;
+  width: 80%;
 }
 
 .last-link {
