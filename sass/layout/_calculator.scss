@@ -151,6 +151,10 @@ a{
 }
 
 /*Status*/
+.head__navigation .item__link:hover{
+  color:$ligth-background-first-color;
+  text-decoration:underline;
+}
 .answer:focus{
   border: solid 2px $dark-first-action-color;
   border-top:none;
@@ -160,7 +164,6 @@ a{
 .answer:hover{
   backdrop-filter: none;
 }
-.head__navigation .item__link:hover{
-  color:$ligth-background-first-color;
-  text-decoration:underline;
+.last-link:hover{
+  transform: translateY(-10px);
 }

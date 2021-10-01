@@ -193,6 +193,11 @@ a {
 }
 
 /*Status*/
+.head__navigation .item__link:hover {
+  color: #FBF9FA;
+  text-decoration: underline;
+}
+
 .answer:focus {
   border: solid 2px #A80038;
   border-top: none;
@@ -204,9 +209,8 @@ a {
   backdrop-filter: none;
 }
 
-.head__navigation .item__link:hover {
-  color: #FBF9FA;
-  text-decoration: underline;
+.last-link:hover {
+  transform: translateY(-10px);
 }
 
 /*# sourceMappingURL=finance.css.map */

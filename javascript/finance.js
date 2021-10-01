@@ -69,7 +69,8 @@ function calculateGain(){
     let answer = validateAnswer(result)
     let trueAnswer = isWhole(answer)
     let gainPercentage = calculateGainPercentage(trueAnswer, sellPrice)
-    let userGain = `Usted está ${moneyStatus(result)} ${trueAnswer} ${discoverPriceWord(answer)} y el porcentaje de ganancia es ${gainPercentage}`
+    let percentageWord = receivePercentageWord(buyPrice, sellPrice)
+    let userGain = `Usted está ${moneyStatus(result)} ${trueAnswer} ${discoverPriceWord(answer)} y el porcentaje de ${percentageWord} es ${gainPercentage} %.`
     document.getElementById('userGain').innerText = userGain
   }else{
     document.getElementById('userGain').innerText = `Ingrese números positivos`
@@ -81,8 +82,14 @@ function calculateGainPercentage(income, totalIncome) {
   }else{
   let percentage = (income / totalIncome) * 100
   let newPercentage = isWhole(percentage)
-  let percentageAndSymbol = `${newPercentage} %`
-  return percentageAndSymbol;
+  return newPercentage
+  }
+}
+function receivePercentageWord(valueA, valueB){
+  if(valueA > valueB){
+    return 'pérdida'
+  }else{
+    return 'ganancia'
   }
 }
 //Calculate price after discount
